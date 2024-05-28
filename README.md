@@ -19,22 +19,27 @@ This is a template project for FastAPI with a basic setup including a router, da
 ## Setup
 
 1. Clone the repository
-2. Activate a virtual Env
-3. Install the dependencies:
+2. Create a virtual env
+```
+python3 -m venv venv
+```
+3. Activate 
+```
+source venv/bin/activate
+```
+4. Install the dependencies:
     ```
     pip install -r requirements.txt
     ```
-4. Create a `.env` file and set your `DATABASE_URL`:
+5. Create a `.env` file and set your `DATABASE_URL`:
     ```
     DATABASE_URL=sqlite:///./playlist-db.db
     ```
-5. Initialize the database with Alembic:
+6. Initialize the database with Alembic to create migration:
     ```
-    alembic init alembic
-    alembic revision --autogenerate -m "Initial migration"
     alembic upgrade head
     ```
-6. Run the application:
+7. Run the application:
     ```
     uvicorn src.main:app --reload
     ```

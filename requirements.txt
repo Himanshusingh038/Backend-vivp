@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+databases
+alembic
+python-dotenv
+pandas
+pytest
+httpx
+pytest-mock
